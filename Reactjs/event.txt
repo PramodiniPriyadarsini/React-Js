@@ -1,0 +1,81 @@
+===============Index,html================
+
+<html>
+	<head><title>Event</title></head>
+	<body>
+		Recat Event
+	</body>
+</html>
+
+
+=============Main.js====================
+
+var React=require('React');
+var ReactDom=require('React-Dom');
+
+var wiproEmployeeComponent=React.createClass(
+ 
+let employeeDetails=this.props.EmployeeOnFeb;
+
+	render:function(){
+	
+	return(
+		<ul>
+			{()=>{
+				
+			employeeDetails.map(item)=>{
+
+			let boundClick=this.OnEmployeeClick.bind(this,item);
+
+
+			return <li key={item.id} onClick={boundClick}>{item.name}</li>			
+
+			});
+				
+
+			}()};
+		</ul>
+
+	);
+		
+	}
+)
+
+
+OnEmployeeClick:function(item,e){
+
+<h3>EmployeeId : {item.employeeId}</h3>	
+
+<h4>Desiganation : {item.designation}</h4>	
+
+
+}
+
+
+
+RecatDom.render(<wiproEmployeeComponent FeburaryEmployee=[
+	
+{name:Pramodini,employeeId:344574,desiganation:Developer},
+
+{name:Netra,employeeId:344573,desiganation:Project Manager}
+
+]>Welcome</wiproEmployeeComponent>);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
