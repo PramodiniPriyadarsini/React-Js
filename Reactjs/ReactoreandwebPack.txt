@@ -1,0 +1,52 @@
+index.html
+===========================
+<html>
+	<head>
+		<title> React with Web Pack</title>
+	</head>
+
+	<body>
+		<div id="myContainer"></div>
+	</body>
+
+</html>
+
+=====================================
+main.js
+=====================================
+
+                <script type="text/babel">
+
+                  var React = require('react');
+
+                  var ReactDOM = require('react-dom');
+
+                  var ReactComponent =React.createClass(
+	
+			render:function()
+
+			{
+	
+				return( <div><h1>Welcome to React</h1></div> );
+	
+			}
+		 );
+
+		 ReactDOM.render(<ReactComponent/>,document.getElementById('myContainer'));
+
+		</script>
+
+
+====================================
+OutPut
+===================================
+
+
+Welcome to React
+
+
+
+
+
+
+

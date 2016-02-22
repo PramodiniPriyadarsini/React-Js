@@ -1,0 +1,60 @@
+==============Index.html========================
+
+<html>
+	<head><title>Reusable Component</title></head>
+	<body>
+		<div id="reactCointainer"></div>
+	</body>
+</html>
+
+
+
+
+===============Main.js==========================
+
+var React=require('React');
+var ReactDom=require('React-Dom')
+
+var wiproEmployeeComponent=React.creatCClass(
+
+	render:function(){
+		return(
+			<div>
+				<h1>Warmaly WElcome New Joinee At Feb 1st 2016</h1>
+
+				<h2>Name : {this.props.name}</h2>
+
+				<h3>Employee Id : {this.props.employeeID}<h3>
+
+				<h4>Desiganation : {this.props.designation}<h4>
+
+				<p>State: {this.props.childern}</p>
+			</div>
+		)
+	}
+
+
+);
+
+
+ReactDom.render(<div>
+<wiproEmployeeComponent name="Netra" employeeID="344573" designation="Project manager">Karanatak</wiproEmployeeComponent>
+<wiproEmployeeComponent name="Pramodini" employeeID="344574" designation="Senior Software Engineer">Odisha</wiproEmployeeComponent>
+</div>,document.getElementById('reactCointainer'));
+
+
+==============Output===========================
+
+   Warmaly WElcome New Joinee At Feb 1st 2016
+
+	Name : Netra
+	Employee Id : 344573
+`	Designation : Prohect manager
+	State : Karanatak
+
+	Name : Pramodini
+	Employee Id : 344574
+`	Designation : Senior Software Engineer
+	State: Odisha
+	State : Karanatak
+                                                                                                                                       
