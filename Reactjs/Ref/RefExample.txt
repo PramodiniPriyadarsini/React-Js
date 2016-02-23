@@ -1,0 +1,37 @@
+var React =require('React');
+
+var ReactDom=require('React-Dom');
+
+
+var RefComponent=React.createClass(
+
+submitForm:function(){
+	
+	<h3>Registraion Details</h3>
+
+	Name : {this.refs.UserName.value}
+
+	Email : {this.refs.Email.value}
+
+	Company : {this.refs.Email.value}
+},
+
+render:function(){
+
+	return
+
+	<div>
+		<h3>Registration</h3>
+		<div>Name : <input type="text" ref="UserName"/> </div>
+		<div>Email : <input type="email" ref="Email"/> </div>
+		<div>Comapny : <input type="text" ref="Comapny"/> </div>
+		<button onClick={this.submitForm}>Submit</button>
+	</div>
+}
+
+);
+
+
+
+
+ReactDom.render(<RefComponent>Reference</RefComponent>,document.getElementById('reactContainer'));
