@@ -1,0 +1,86 @@
+----------------------Properties------------------------
+
+
+1)Properties are defined when components are created, whether by JSX or by pure JavaScript. State
+
+2)it is only seen on the inside of component definitions.
+
+
+-------------------State-----------------------------
+
+
+1)State affects how a component behaves and renders.
+
+
+
+2)When you think of state, you should think of an internal data-set which affects the rendering of components.
+
+
+
+
+3)You, as the developer of a component, are the only person who should know what state your component needs, 
+
+and the correct data types which should be accepted/provided.
+
+
+
+4)State should be considered private data.
+
+
+
+Setting Initial State
+--------------------
+
+
+
+defining a method called getInitialState() and returning an object:
+
+
+
+Setting State
+----------------
+
+1)Setting state should only be done from inside the component. 
+
+
+2)You want update the data through setState 
+                                   ---------
+
+
+
+You cannot set new state values until the component has been mounted. 
+
+This happens when 
+it’s passed (whether directly or by nesting it) to the React.renderComponent() method.
+
+
+
+
+Replacing State
+---------------
+
+Replace values in the state by using the replaceState() method. 
+
+
+
+
+
+The replaceState() method is for when you want to clear out the values already in state, and add new ones.
+
+
+
+
+prejula nair 
+
+
+
+
+
+
+
+
+
+
+
+
+

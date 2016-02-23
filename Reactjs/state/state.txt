@@ -1,0 +1,57 @@
+var React=require('React');
+
+var ReactDom=require('React-Dom');
+
+
+var PersonInfoComponent=React.createClass(
+
+	getIntialState:function(){
+
+		return{
+			Company : "SmartInfosys Private Limited"
+			Location : "Gujurat"
+		};
+	},
+
+	firstCompany:function(){
+
+		this.replaceState({
+			Company : "SmartInfosys Private Limited"
+			Location : "Gujurat"
+		})	
+	
+	},
+
+	currentCompany:function(){
+
+		this.setState({
+			
+			Company : "Wipro Technology"
+			Location : "Karanatak"
+		})
+	},
+	
+	render:function(){
+
+			return
+
+			<div>
+		
+			<h3>{this.state.childern} Info</h3>
+
+			<button onClick={this.firstCompany}>First Comapny</button>
+
+			<button onClick={this.currentCompany}>Current Comapny</button>
+
+			Comapny : {this.state.Comapny}
+	
+			Location : {this.state.Location}
+
+			</div>
+			
+	}
+
+);
+
+
+ReactDom.render(<PersonInfoComponent>Pramodini</PersonInfoComponent>,document.getElementById('ReactContainer'));
