@@ -1,0 +1,40 @@
+var Recat=require('react');
+
+var ReactDom=require('react-Dom');
+
+var stickyComponent=Recat.createClass(
+	
+	componentWillMount:function(){
+		alert("Wait Component will Mount");
+	
+	},
+
+	componentDidMount:function(){
+		alert("Component finish the Mount");
+	},
+
+	render:function (){
+
+		returen (
+
+			<div id="stickyWrap">
+
+				<h3>{this.props.children}</h3>
+
+				Today should be done component life cycle.
+			</div>
+		)
+	}
+);
+
+ReactDom.render(<stickyComponent>Sticky</stickyComponemt>,document.getElementByBody('ReactContainer'));
+
+var removeStickyComponent=document.getElementById('stickyWrap');
+
+
+removeStickyComponent.onClick=function(){
+
+	ReactDom.unMountComponentAtnode(document.getElementById('ReactContainer'));
+
+	alert("component is unMounted");
+}
